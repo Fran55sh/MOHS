@@ -900,6 +900,10 @@ footer {
         font-size: 2rem;
     }
 
+    .mohs-content{
+        max-width: 100%;
+    }
+
     .mohs-sections-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
@@ -922,6 +926,11 @@ footer {
 .mohs-comparison {
     padding: 6rem 0;
     background: var(--light-bg);
+}
+
+.mohs-comparison-content{
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 .mohs-comparison h2 {
@@ -1044,6 +1053,7 @@ footer {
     .mohs-intro-content{
         max-width: 100%;
     }
+
     .mohs-comparison h2 {
         font-size: 2rem;
     }

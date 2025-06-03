@@ -1261,6 +1261,7 @@ footer {
 /* Full width content for small screens */
 @media (max-width: 420px) {
     /* Container and general content */
+   
     .container,
     .hero-content,
     .about-content,
@@ -1293,7 +1294,7 @@ footer {
     .mohs-details,
     .mohs-comparison,
     .risks-recovery {
-        padding: 2rem 10px;
+        padding: 2rem 15px;
     }
 
     /* Card and grid items */
@@ -1343,4 +1344,22 @@ footer {
     .nav-links.active {
         padding: 0.5rem 5px;
     }
+}
+
+/* Text Justification */
+p, 
+.about-text, 
+.mohs-intro-content,
+.step,
+.info-card,
+.faq-answer,
+.comparison-column,
+.comparison-results,
+.false-mohs p,
+.risks p, 
+.recovery p, 
+.restrictions p,
+.mohs-content > p,
+.comparison-intro p {
+    text-align: justify;
 } 

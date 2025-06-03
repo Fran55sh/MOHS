@@ -45,6 +45,10 @@ body {
     color: var(--primary-color);
 }
 
+.nav-links {
+    display: none;
+}
+
 .nav-links a {
     text-decoration: none;
     color: var(--text-color);
@@ -57,9 +61,10 @@ body {
 }
 
 .hamburger {
-    display: none;
+    display: flex;
     flex-direction: column;
     cursor: pointer;
+    z-index: 1001;
 }
 
 .hamburger span {
@@ -68,6 +73,16 @@ body {
     background: var(--primary-color);
     margin: 2px 0;
     transition: 0.3s;
+}
+
+@media (min-width: 769px) {
+    .nav-links {
+        display: flex;
+    }
+    
+    .hamburger {
+        display: none;
+    }
 }
 
 /* Hero Section */

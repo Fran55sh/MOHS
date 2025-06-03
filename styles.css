@@ -1149,4 +1149,198 @@ footer {
         padding: 1.5rem;
         margin-bottom: 2rem;
     }
+}
+
+/* Additional Mobile Responsiveness Fixes for Very Small Screens */
+@media (max-width: 320px) {
+    /* Container adjustments */
+    .container {
+        max-width: 95%;
+        padding: 0 10px;
+    }
+
+    /* Navbar adjustments */
+    .navbar {
+        padding: 0.75rem 1rem;
+    }
+
+    .nav-brand {
+        font-size: 1.2rem;
+    }
+
+    /* Hero section adjustments */
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Team section adjustments */
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-card {
+        margin: 0 10px;
+    }
+
+    .team-card img {
+        height: 250px;
+    }
+
+    /* Contact section adjustments */
+    .contact-container {
+        padding: 1rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.6rem;
+    }
+
+    /* FAQ adjustments */
+    .faq-question {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .faq-answer {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* Resources section adjustments */
+    .resources {
+        padding: 1rem;
+    }
+
+    .resources .download-btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* Comparison section adjustments */
+    .comparison-column {
+        padding: 1rem;
+    }
+
+    .comparison-column h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Risks and recovery section adjustments */
+    .risks, .recovery, .restrictions {
+        padding: 1rem;
+    }
+
+    .risks h3, .recovery h3, .restrictions h3 {
+        font-size: 1.3rem;
+    }
+
+    /* General text adjustments */
+    p {
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 1.8rem !important;
+    }
+
+    h3 {
+        font-size: 1.4rem !important;
+    }
+}
+
+/* Full width content for small screens */
+@media (max-width: 420px) {
+    /* Container and general content */
+    .container,
+    .hero-content,
+    .about-content,
+    .mohs-intro-content,
+    .team-intro,
+    .team-grid,
+    .mohs-info,
+    .timeline,
+    .faq-container,
+    .info-container,
+    .contact-container,
+    .mohs-content,
+    .comparison-content,
+    .mohs-comparison-content,
+    .risks-content {
+        max-width: 100%;
+        padding: 5px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Section padding adjustments */
+    .about,
+    .mohs-intro,
+    .team,
+    .mohs,
+    .faq,
+    .patient-info,
+    .contact,
+    .mohs-details,
+    .mohs-comparison,
+    .risks-recovery {
+        padding: 2rem 10px;
+    }
+
+    /* Card and grid items */
+    .team-card,
+    .info-card,
+    .step,
+    .resources,
+    .comparison-column,
+    .comparison-results,
+    .false-mohs,
+    .risks,
+    .recovery,
+    .restrictions {
+        margin: 0.5rem 0;
+        padding: 1rem 5px;
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    /* Fix for nested content */
+    .risks p,
+    .recovery p,
+    .restrictions p {
+        max-width: 100%;
+    }
+
+    /* Grid adjustments */
+    .mohs-sections-grid,
+    .comparison-grid,
+    .benefits-grid,
+    .stats {
+        gap: 0.5rem;
+    }
+
+    /* Timeline adjustments */
+    .timeline-item {
+        width: calc(100% - 20px);
+        margin-left: 20px;
+        padding: 1rem 20px;
+    }
+
+    /* Navigation adjustments */
+    .navbar {
+        padding: 0.75rem 5px;
+    }
+
+    .nav-links.active {
+        padding: 0.5rem 5px;
+    }
 } 

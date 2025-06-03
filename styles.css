@@ -29,6 +29,7 @@ body {
 .navbar {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     background: white;
     padding: 1rem 2rem;
@@ -37,6 +38,7 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
+    box-sizing: border-box;
 }
 
 .nav-brand {
@@ -529,12 +531,19 @@ footer {
         left: 0;
         right: 0;
         background: white;
-        padding: 1rem;
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .nav-links.active a {
-        margin: 0.5rem 0;
+        margin: 0;
+        padding: 10px 15px;
+        border-bottom: 1px solid var(--light-bg);
+    }
+
+    .nav-links.active a:last-child {
+        border-bottom: none;
     }
 
     .timeline::before {
@@ -1276,7 +1285,6 @@ footer {
 /* Full width content for small screens */
 @media (max-width: 420px) {
     /* Container and general content */
-   
     .container,
     .hero-content,
     .about-content,
@@ -1298,7 +1306,69 @@ footer {
         margin-right: 0;
     }
 
-    /* Section padding adjustments */
+    /* Navigation adjustments */
+    .navbar {
+        width: 100%;
+        padding: 0.75rem 5px;
+        box-sizing: border-box;
+    }
+
+    .nav-links.active {
+        width: 100%;
+        left: 0;
+        right: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .nav-links.active a {
+        padding: 10px 5px;
+        margin: 0;
+        border-bottom: 1px solid var(--light-bg);
+    }
+
+    .nav-links.active a:last-child {
+        border-bottom: none;
+    }
+
+    .nav-brand {
+        font-size: 1.2rem;
+    }
+
+    /* Rest of your existing 420px media query styles... */
+    .timeline-item {
+        width: calc(100% - 20px);
+        margin-left: 20px;
+        padding: 1rem 20px;
+    }
+
+    .timeline-item::before {
+        left: -40px !important;
+        right: auto !important;
+    }
+
+    .resources {
+        padding: 1rem;
+    }
+
+    .resources .download-btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .risks p,
+    .recovery p,
+    .restrictions p {
+        max-width: 100%;
+    }
+
+    .mohs-sections-grid,
+    .comparison-grid,
+    .benefits-grid,
+    .stats {
+        gap: 0.5rem;
+    }
+
     .about,
     .mohs-intro,
     .team,
@@ -1312,11 +1382,9 @@ footer {
         padding: 2rem 15px;
     }
 
-    /* Card and grid items */
     .team-card,
     .info-card,
     .step,
-    .resources,
     .comparison-column,
     .comparison-results,
     .false-mohs,
@@ -1329,14 +1397,12 @@ footer {
         border-radius: 5px;
     }
 
-    /* Fix for nested content */
     .risks p,
     .recovery p,
     .restrictions p {
         max-width: 100%;
     }
 
-    /* Grid adjustments */
     .mohs-sections-grid,
     .comparison-grid,
     .benefits-grid,
@@ -1344,20 +1410,15 @@ footer {
         gap: 0.5rem;
     }
 
-    /* Timeline adjustments */
     .timeline-item {
         width: calc(100% - 20px);
         margin-left: 20px;
         padding: 1rem 20px;
     }
 
-    /* Navigation adjustments */
-    .navbar {
-        padding: 0.75rem 5px;
-    }
-
-    .nav-links.active {
-        padding: 0.5rem 5px;
+    .timeline-item::before {
+        left: -40px !important;
+        right: auto !important;
     }
 }
 

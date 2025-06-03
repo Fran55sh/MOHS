@@ -932,7 +932,7 @@ footer {
 }
 
 .comparison-content {
-    max-width: 1000px;
+    max-width: 80%;
     margin: 0 auto;
 }
 
@@ -1040,6 +1040,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+
+    .mohs-intro-content{
+        max-width: 100%;
+    }
     .mohs-comparison h2 {
         font-size: 2rem;
     }

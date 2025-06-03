@@ -138,15 +138,7 @@ contactForm.addEventListener('submit', async (e) => {
 });
 
 // Scroll-based Navbar Background
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.style.background = '#ffffff';
-        navbar.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
-    } else {
-        navbar.style.background = 'transparent';
-        navbar.style.boxShadow = 'none';
-    }
-});
+
 
 // Enhanced Scroll-based Animations
 const animateOnScroll = () => {

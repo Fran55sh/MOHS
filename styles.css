@@ -90,12 +90,12 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('https://placehold.co/1920x1080/87b5e7/ffffff?text=Medical+Center+Background');
+    background-image: url("modern-trendy-health-care-centre-medical-clinic-lobby-waiting-room-interior-background_67155-22760.avif");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    filter: brightness(0.7);
-    z-index: -2;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    z-index: 1;
 }
 
 .hero::after {
@@ -105,8 +105,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: -1;
+    background: linear-gradient(135deg, rgba(111, 147, 185, 0.788), rgba(98, 131, 168, 0.75));
+    z-index: 1;
 }
 
 .hero-content {

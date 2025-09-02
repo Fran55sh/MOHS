@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Parallax invertido</title>
+  <style>
+    .img-container {
+      overflow: hidden;
+      width: 600px;
+      height: 400px;
+      position: relative;
+      border: 2px solid #000;
+    }
+
+    .parallax-img {
+      width: 110%;   /* un poco más grande que el contenedor */
+      height: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: transform 0.1s ease-out;
+    }
+  </style>
+</head>
+<body>
+  <div class="img-container">
+    <img src="https://picsum.photos/800/600" alt="Foto" class="parallax-img">
+  </div>
+
+  <script>
+    const container = document.querySelector('.img-container');
+    const img = container.querySelector('.parallax-img');
+
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const moveX = (x - rect.width / 2) * 0.05;
+      const moveY = (y - rect.height / 2) * 0.05;
+
+      // inverso al mouse
+      img.style.transform = `translate(${-moveX}px, ${-moveY}px)`;
+    });
+
+    container.addEventListener('mouseleave', () => {
+      img.style.transform = 'translate(0,0)';
+    });
+  </script>
+</body>
+</html>

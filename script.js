@@ -6,6 +6,25 @@ AOS.init({
     mirror: false
 });
 
+  const container = document.querySelector('.img-container');
+    const img = container.querySelector('.parallax-img');
+
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const moveX = (x - rect.width / 2) * 0.05;
+      const moveY = (y - rect.height / 2) * 0.05;
+
+      // inverso al mouse
+      img.style.transform = `translate(${-moveX}px, ${-moveY}px)`;
+    });
+
+    container.addEventListener('mouseleave', () => {
+      img.style.transform = 'translate(0,0)';
+    });
+
 // Get DOM elements
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
@@ -195,6 +214,9 @@ const initTooltips = () => {
         });
     });
 };
+
+
+
 
 // Initialize all components when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {

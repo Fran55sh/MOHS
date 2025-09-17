@@ -44,7 +44,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     background: white;
     padding: 1rem 2rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -53,6 +53,7 @@ body {
     align-items: center;
     z-index: 1000;
     box-sizing: border-box;
+
 }
 
 .nav-brand {
@@ -1489,7 +1490,7 @@ footer {
 
     /* Navigation adjustments */
     .navbar {
-        width: 100%;
+        width: 100vw;
         padding: 0.75rem 5px;
         box-sizing: border-box;
     }
@@ -1643,4 +1644,8 @@ p,
   @keyframes mover {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); } /* mitad del carrusel para loop */
+  }
+
+  .care-instructions, .sunscreen-info{
+    max-width: 90vw;
   }

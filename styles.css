@@ -103,6 +103,10 @@ body {
     flex-direction: column-reverse;
 }
 
+.step-item{
+    width: 90vw;
+}
+
 }
 
 @media (min-width: 769px) {
@@ -310,7 +314,7 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease;
-    max-width: 60%;
+    min-width: 50vw;
     margin: 0 auto;
 }
 

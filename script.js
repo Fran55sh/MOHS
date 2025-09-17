@@ -25,6 +25,8 @@ AOS.init({
       img.style.transform = 'translate(0,0)';
     });
 
+
+
 // Get DOM elements
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
@@ -72,34 +74,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Enhanced FAQ Accordion with Smooth Animation
-const faqItems = document.querySelectorAll('.faq-item');
-
-faqItems.forEach(item => {
-    const question = item.querySelector('.faq-question');
-    const answer = item.querySelector('.faq-answer');
-    
-    question.addEventListener('click', () => {
-        const isActive = item.classList.contains('active');
-        
-        // Close all FAQ items smoothly
-        faqItems.forEach(faqItem => {
-            const faqAnswer = faqItem.querySelector('.faq-answer');
-            if (faqItem !== item) {
-                faqItem.classList.remove('active');
-                faqAnswer.style.maxHeight = '0';
-            }
-        });
-
-        // Toggle clicked item
-        item.classList.toggle('active');
-        if (!isActive) {
-            answer.style.maxHeight = answer.scrollHeight + 'px';
-        } else {
-            answer.style.maxHeight = '0';
-        }
-    });
-});
+// FAQ now works with pure CSS - no JavaScript needed!
 
 // Enhanced Form Validation and Submission
 const contactForm = document.getElementById('contactForm');

@@ -1,51 +1,44 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Parallax invertido</title>
+  <meta name="viewport" content="width=<div class="galeria">
+    <div class="carrusel">
+      <img src="https://via.placeholder.com/300x500?text=Foto+1" alt="Foto 1">
+      <img src="https://via.placeholder.com/300x500?text=Foto+2" alt="Foto 2">
+      <img src="https://via.placeholder.com/300x500?text=Foto+3" alt="Foto 3">
+      <img src="https://via.placeholder.com/300x500?text=Foto+4" alt="Foto 4">
+    </div>
+  </div>
+  
   <style>
-    .img-container {
-      overflow: hidden;
-      width: 600px;
-      height: 400px;
-      position: relative;
-      border: 2px solid #000;
-    }
-
-    .parallax-img {
-      width: 110%;   /* un poco más grande que el contenedor */
-      height: auto;
-      position: absolute;
-      top: 0;
-      left: 0;
-      transition: transform 0.1s ease-out;
-    }
-  </style>
+  .galeria {
+    width: 100%;
+    height: 400px; /* altura del contenedor */
+    overflow: hidden;
+    border: 1px solid #ccc;
+  }
+  
+  .carrusel {
+    display: flex;
+    width: calc(100% * 4); /* cantidad de imágenes */
+    animation: mover 16s linear infinite;
+  }
+  
+  .carrusel img {
+    width: 25%; /* 100% dividido por cantidad de imágenes */
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  @keyframes mover {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-75%); } /* mueve hasta la última imagen */
+  }
+  </style>, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
-  <div class="img-container">
-    <img src="https://picsum.photos/800/600" alt="Foto" class="parallax-img">
-  </div>
-
-  <script>
-    const container = document.querySelector('.img-container');
-    const img = container.querySelector('.parallax-img');
-
-    container.addEventListener('mousemove', (e) => {
-      const rect = container.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-
-      const moveX = (x - rect.width / 2) * 0.05;
-      const moveY = (y - rect.height / 2) * 0.05;
-
-      // inverso al mouse
-      img.style.transform = `translate(${-moveX}px, ${-moveY}px)`;
-    });
-
-    container.addEventListener('mouseleave', () => {
-      img.style.transform = 'translate(0,0)';
-    });
-  </script>
+  
 </body>
 </html>

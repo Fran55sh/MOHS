@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #87b5e7;   
+    --primary-color: #919092;   
     --secondary-color: #c0d8f4;
     --text-color: #888686;
     --light-bg: #d5e6fa;
@@ -14,19 +14,30 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
+    font-size: 1.2rem;
 }
 
 .container {
     margin: 0 auto;
     padding: 0 20px;
 }
+
+.about-image {width: 2500px;
+    height: 700px;
+    overflow: hidden;}
+
+
 .about-image img {
     width: 100%;
+    height: 100%;
     border-radius: 10px;
+    object-fit: cover;
+    object-position: top center;
 }
+
 
 
 .navbar {
@@ -78,6 +89,20 @@ body {
     background: var(--primary-color);
     margin: 2px 0;
     transition: 0.3s;
+}
+
+@media (max-width: 1500px) {
+    
+.about-image {width: 100%;
+    height: 100%;}
+
+.about-content{
+    flex-direction: column;
+}
+.mohs-intro .container{
+    flex-direction: column-reverse;
+}
+
 }
 
 @media (min-width: 769px) {
@@ -204,14 +229,27 @@ body {
 }
 
 /* Mohs Intro Section */
-.mohs-intro {
-    padding: 6rem 0;
+.mohs-intro .container {
+    padding: 6rem 3rem;
     background: var(--light-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.crop_about{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10px;
 }
 
 .mohs-intro-content {
-    max-width: 80%;
-    margin: 0 auto;
+    max-width: 50%;
+    margin: 0;
+
 }
 
 .mohs-intro h2 {
@@ -243,6 +281,71 @@ body {
     color: var(--primary-color);
     margin-bottom: 1rem;
     font-size: 1.3rem;
+}
+
+/* Mohs Step by Step Section */
+.mohs-step-by-step {
+    padding: 5rem 2rem;
+    background: var(--light-bg);
+}
+
+.mohs-step-by-step h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.steps-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.step-item {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.step-item:nth-child(odd) {
+    margin-left: 0;
+    margin-right: auto;
+    text-align: left;
+}
+
+.step-item:nth-child(even) {
+    margin-left: auto;
+    margin-right: 0;
+    text-align: right;
+}
+
+.step-item:hover {
+    transform: translateY(-5px);
+}
+
+.step-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.step-item p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.steps-note {
+    text-align: center;
+    font-style: italic;
+    color: var(--primary-color);
+    margin-top: 2rem;
 }
 
 /* Team Section */
@@ -408,23 +511,90 @@ body {
     margin-bottom: 1rem;
     border: 1px solid var(--secondary-color);
     border-radius: 5px;
-    overflow: hidden;
+    background: var(--white);
 }
 
 .faq-question {
-    padding: 1rem;
+    padding: 1.5rem;
     background: var(--light-bg);
     cursor: pointer;
     font-weight: 500;
+    position: relative;
+    transition: background 0.3s ease;
+    border-radius: 5px 5px 0 0;
 }
 
-.faq-answer {
-    padding: 1rem;
+.faq-question:hover {
+    background: var(--secondary-color);
+}
+
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question::after {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+/* FAQ Accordion - Pure CSS Solution */
+.faq-toggle {
     display: none;
 }
 
-.faq-item.active .faq-answer {
+.faq-question {
+    padding: 1.5rem;
+    background: var(--light-bg);
+    cursor: pointer;
+    font-weight: 500;
+    position: relative;
+    transition: background 0.3s ease;
+    border-radius: 5px 5px 0 0;
     display: block;
+}
+
+.faq-question:hover {
+    background: var(--secondary-color);
+}
+
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1.5rem;
+    background: var(--white);
+    border-radius: 0 0 5px 5px;
+  }
+  
+  .faq-toggle:checked + .faq-question + .faq-answer {
+    max-height: 1000px;
+    padding: 1.5rem;
+  }
+
+
+/* Rotate + to × when checked */
+.faq-toggle:checked + .faq-question::after {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+/* Close other FAQs when one is opened */
+.faq-toggle:checked + .faq-question {
+    background: var(--secondary-color);
 }
 
 /* Patient Info Section */
@@ -609,6 +779,7 @@ footer {
     background: white;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    max-height: fit-content;
 }
 
 .resources h3 {
@@ -657,14 +828,6 @@ footer {
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
-.faq-question {
-    padding: 1.5rem;
-    background: var(--light-bg);
-    cursor: pointer;
-    font-weight: 500;
-    position: relative;
-    transition: background 0.3s ease;
-}
 
 .faq-question::after {
     content: '+';
@@ -681,18 +844,6 @@ footer {
     transform: translateY(-50%) rotate(45deg);
 }
 
-.faq-answer {
-    padding: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    background: white;
-}
-
-.faq-item.active .faq-answer {
-    padding: 1.5rem;
-    max-height: 500px;
-}
 
 /* Enhanced Timeline Styling */
 .timeline-item {
@@ -1084,6 +1235,26 @@ footer {
         max-width: 100%;
     }
 
+    .mohs-step-by-step {
+        padding: 3rem 1rem;
+    }
+
+    .mohs-step-by-step h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .steps-grid {
+        gap: 2rem;
+    }
+
+    .step-item {
+        padding: 1.5rem;
+        max-width: 100%;
+        margin: 0 auto !important;
+        text-align: center !important;
+    }
+
     .mohs-comparison h2 {
         font-size: 2rem;
     }
@@ -1377,6 +1548,7 @@ footer {
 
     .about,
     .mohs-intro,
+    .mohs-step-by-step,
     .team,
     .mohs,
     .faq,
@@ -1445,3 +1617,26 @@ p,
 .comparison-intro p {
     text-align: justify;
 } 
+
+.galeria {
+    width: 100%;
+    max-height: 90vh; /* limita la altura */
+    overflow: hidden;
+  }
+  
+  .carrusel {
+    display: flex;
+    animation: mover 12s linear infinite;
+  }
+  
+  .carrusel img {
+    flex: 0 0 calc(100% / 3); /* 3 imágenes visibles */
+    height: auto; /* altura automática según proporción */
+    max-height: 90vh; /* no se pase del contenedor */
+    object-fit: cover; /* recorta bordes si hace falta */
+  }
+  
+  @keyframes mover {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* mitad del carrusel para loop */
+  }

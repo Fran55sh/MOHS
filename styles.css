@@ -1686,14 +1686,12 @@ footer {
     .risks-content {
         max-width: 100%;
         padding: 5px;
-        margin-left: 0;
         margin-right: 0;
     }
 
     /* Navigation adjustments */
     .navbar {
         width: 100vw;
-        padding: 0.75rem 5px;
         box-sizing: border-box;
     }
 
@@ -2093,4 +2091,5 @@ p,
 .faq-toggle:checked + .faq-question + .faq-answer {
     max-height: 1000px;
     padding: 1.5rem;
+
 }

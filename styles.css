@@ -1662,14 +1662,12 @@ footer {
     .risks-content {
         max-width: 100%;
         padding: 5px;
-        margin-left: 0;
         margin-right: 0;
     }
 
     /* Navigation adjustments */
     .navbar {
         width: 100vw;
-        padding: 0.75rem 5px;
         box-sizing: border-box;
     }
 

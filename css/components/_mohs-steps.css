@@ -1,0 +1,66 @@
+/* Mohs Step by Step Section */
+.mohs-step-by-step {
+    padding: 5rem 2rem;
+    background: var(--light-bg);
+}
+
+.mohs-step-by-step h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.steps-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.step-item {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 70vw;
+    max-width: 70vw;
+    margin: 0 auto;
+}
+
+.step-item:nth-child(odd) {
+    margin-left: 0;
+    margin-right: auto;
+    text-align: left;
+}
+
+.step-item:nth-child(even) {
+    margin-left: auto;
+    margin-right: 0;
+    text-align: right;
+}
+
+.step-item:hover {
+    transform: translateY(-5px);
+}
+
+.step-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.step-item p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.steps-note {
+    text-align: center;
+    font-style: italic;
+    color: var(--primary-color);
+    margin-top: 2rem;
+}
+

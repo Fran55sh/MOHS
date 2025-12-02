@@ -1,0 +1,468 @@
+/* Responsive Design - Consolidated Media Queries */
+
+/* Large Desktop */
+@media (max-width: 1500px) {
+    .about-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .mohs-intro .container {
+        flex-direction: column-reverse;
+    }
+
+    .step-item {
+        width: 70vw;
+    }
+}
+
+/* Tablet and below - Main breakpoint */
+@media (max-width: 800px) {
+    .hero {
+        height: 500px;
+        min-height: 500px;
+        padding-top: 0;
+    }
+    
+    .video-container {
+        height: 100%;
+    }
+}
+
+/* Mobile - Main breakpoint */
+@media (max-width: 768px) {
+    /* Navbar */
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        width: 100%;
+        box-sizing: border-box;
+        z-index: 99998;
+    }
+
+    .nav-links.active a {
+        margin: 0;
+        padding: 10px 15px;
+        border-bottom: 1px solid var(--light-bg);
+    }
+
+    .nav-links.active a:last-child {
+        border-bottom: none;
+    }
+
+    /* Hero */
+    .hero {
+        height: 500px;
+        min-height: 500px;
+        padding-top: 0;
+    }
+
+    .hero-content {
+        padding-top: 80px;
+        height: 100%;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .quick-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .btn {
+        width: 200px;
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    /* About */
+    .about .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 80%;
+        gap: 2rem;
+    }
+
+    /* Mohs Intro */
+    .mohs-intro-content {
+        max-width: 100%;
+    }
+
+    .steps {
+        flex-direction: column;
+    }
+
+    .steps .step {
+        width: 100%;
+    }
+
+    .ventajasflex {
+        flex-direction: column-reverse;
+    }
+
+    .mohs-what {
+        flex-direction: column-reverse;
+    }
+
+    /* Mohs Steps */
+    .mohs-step-by-step {
+        padding: 3rem 1rem;
+    }
+
+    .mohs-step-by-step h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .steps-grid {
+        gap: 2rem;
+    }
+
+    .step-item {
+        padding: 1.5rem;
+        width: 70vw;
+        max-width: 70vw;
+        margin: 0 auto !important;
+        text-align: center !important;
+    }
+
+    /* Timeline */
+    .timeline::before {
+        left: 0;
+    }
+
+    .timeline-item {
+        width: calc(100% - 30px);
+        margin-left: 30px;
+    }
+
+    .timeline-item::before {
+        left: -40px !important;
+        right: auto !important;
+    }
+
+    /* Resources */
+    .resources {
+        padding: 1rem;
+    }
+
+    .resources .download-btn {
+        padding: 0.8rem 1.5rem;
+    }
+
+    /* Mohs Details */
+    .mohs-details h2 {
+        font-size: 2rem;
+    }
+
+    .mohs-content {
+        max-width: 100%;
+    }
+
+    .mohs-sections-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .effectiveness, .advantages, .indications {
+        padding: 1.5rem;
+    }
+
+    .stats, .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-item, .benefit-item {
+        padding: 1.5rem;
+    }
+
+    /* Mohs Comparison */
+    .mohs-comparison h2 {
+        font-size: 2rem;
+    }
+
+    .comparison-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-column, .comparison-results, .false-mohs {
+        padding: 1.5rem;
+    }
+
+    /* Risks Recovery */
+    .risks-recovery h2 {
+        font-size: 2rem;
+    }
+
+    .risks h3, .recovery h3, .restrictions h3 {
+        font-size: 1.5rem;
+    }
+
+    .risks, .recovery, .restrictions {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Carousel */
+    .carrusel {
+        width: 600%;
+    }
+
+    /* CV Pages */
+    .cv-header h1 {
+        font-size: 2rem;
+    }
+
+    .cv-container {
+        padding: 0 1rem;
+    }
+
+    .cv-content {
+        padding: 1.5rem;
+    }
+
+    .cv-section {
+        padding: 100px 0 40px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+    .nav-links {
+        display: flex;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .carrusel {
+        width: 1200%;
+    }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 420px) {
+    .container,
+    .hero-content,
+    .about-content,
+    .mohs-intro-content,
+    .team-intro,
+    .team-grid,
+    .mohs-info,
+    .timeline,
+    .faq-container,
+    .info-container,
+    .contact-container,
+    .mohs-content,
+    .comparison-content,
+    .mohs-comparison-content,
+    .risks-content {
+        max-width: 100%;
+        padding: 5px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .navbar {
+        width: 100vw;
+        padding: 0.75rem 5px;
+        box-sizing: border-box;
+    }
+
+    .nav-brand {
+        font-size: 1.2rem;
+    }
+
+    .timeline-item {
+        width: calc(100% - 20px);
+        margin-left: 20px;
+        padding: 1rem 20px;
+    }
+
+    .timeline-item::before {
+        left: -40px !important;
+        right: auto !important;
+    }
+
+    .resources {
+        padding: 1rem;
+    }
+
+    .resources .download-btn {
+        padding: 0.75rem 1rem;
+    }
+
+    .risks p,
+    .recovery p,
+    .restrictions p {
+        max-width: 100%;
+    }
+
+    .mohs-sections-grid,
+    .comparison-grid,
+    .benefits-grid,
+    .stats {
+        gap: 0.5rem;
+    }
+
+    .about,
+    .mohs-intro,
+    .mohs-step-by-step,
+    .team,
+    .mohs,
+    .faq,
+    .patient-info,
+    .contact,
+    .mohs-details,
+    .mohs-comparison,
+    .risks-recovery {
+        padding: 2rem 15px;
+    }
+
+    .team-card,
+    .info-card,
+    .step,
+    .comparison-column,
+    .comparison-results,
+    .false-mohs,
+    .risks,
+    .recovery,
+    .restrictions {
+        margin: 0.5rem 0;
+        padding: 1rem 5px;
+        width: 100%;
+        border-radius: 5px;
+    }
+}
+
+/* Very Small Mobile */
+@media (max-width: 320px) {
+    .container {
+        max-width: 95%;
+        padding: 0 10px;
+    }
+
+    .navbar {
+        padding: 0.75rem 1rem;
+    }
+
+    .nav-brand {
+        font-size: 1.2rem;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-card {
+        margin: 0 10px;
+    }
+
+    .team-card img {
+        height: 250px;
+    }
+
+    .contact-container {
+        padding: 1rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.6rem;
+    }
+
+    .faq-question {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .faq-answer {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .resources {
+        padding: 1rem;
+    }
+
+    .resources .download-btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .comparison-column {
+        padding: 1rem;
+    }
+
+    .comparison-column h3 {
+        font-size: 1.2rem;
+    }
+
+    .risks, .recovery, .restrictions {
+        padding: 1rem;
+    }
+
+    .risks h3, .recovery h3, .restrictions h3 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 1.8rem !important;
+    }
+
+    h3 {
+        font-size: 1.4rem !important;
+    }
+}
+

@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro de Cirugía Micrográfica de Mohs</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
-        <div class="nav-brand"><img style="width: 5vw; min-width: 50px;" src="assets/logo MOHS.PNG" alt="logo"></div>
+        <div class="nav-brand"><img style="width: 5vw; min-width: 50px;" src="assets/images/logo/logo-mohs.png" alt="logo"></div>
         <div class="nav-links">
             <a href="#home">Inicio</a>
             <a href="#about">Quiénes Somos</a>
@@ -28,9 +28,11 @@
     </nav>
 
     <section class="hero" id="home">
+        <div class="video-container">
+            <video id="hero-video" src="assets/video/hero-video.webm" autoplay muted></video>
+        </div>
         <H1 style="z-index: 10000; top:150PX; position: absolute; color: white;">CONFIANZA Y PRECISION</H1>
         <div class="hero-content">
-            <div class="hero-image-carousel" style="background-image: url('assets/Portada/portada.png'); opacity: 1;" data-bg-1="assets/Portada/portada.png" data-bg-2="assets/Portada/portada2.png"></div>
             <div class="quick-links">
                 <a href="#about" class="btn">Conócenos</a>
                 <a href="#contacto" class="btn btn-outline">Contacto</a>
@@ -39,7 +41,7 @@
     </section>
 
     <section class="about" id="about">
-        <div class="container">
+        <div class="container" style="margin: auto;">
             <h2>QUIÉNES SOMOS</h2>
             <div class="about-content">
                 <div class="about-text">
@@ -59,7 +61,7 @@
                 
                 <div class="mohs-what">
                     <div class="img-mohs-intro">
-                        <img src="assets/como se realiza.jpeg" style="max-width: 100%;" alt="">
+                        <img src="assets/images/misc/como-se-realiza.jpeg" style="max-width: 100%;" alt="">
                     </div>
                     <div class="mohs-what-text">
                     <h3>¿QUÉ ES LA CIRUGÍA DE MOHS?</h3>
@@ -123,17 +125,17 @@
 
     <section class="galeria">
         <div class="carrusel">
-            <img src="assets/pasos/paso1.jpg" alt="Paso 1">
-            <img src="assets/pasos/paso2.jpg" alt="Paso 2">
-            <img src="assets/pasos/paso3.jpg" alt="Paso 3">
-            <img src="assets/pasos/paso5.jpg" alt="Paso 5">
-            <img src="assets/pasos/paso6.jpg" alt="Paso 6">
-            <img src="assets/pasos/paso7.jpg" alt="Paso 7">
-            <img src="assets/pasos/paso1.jpg" alt="Paso 1">
-            <img src="assets/pasos/paso2.jpg" alt="Paso 2">
-            <img src="assets/pasos/paso3.jpg" alt="Paso 3">
-            <img src="assets/pasos/paso5.jpg" alt="Paso 5">
-            <img src="assets/pasos/paso6.jpg" alt="Paso 6">
+            <img src="assets/images/procedures/paso1.jpg" alt="Paso 1">
+            <img src="assets/images/procedures/paso2.jpg" alt="Paso 2">
+            <img src="assets/images/procedures/paso3.jpg" alt="Paso 3">
+            <img src="assets/images/procedures/paso5.jpg" alt="Paso 5">
+            <img src="assets/images/procedures/paso6.jpg" alt="Paso 6">
+            <img src="assets/images/procedures/paso7.jpg" alt="Paso 7">
+            <img src="assets/images/procedures/paso1.jpg" alt="Paso 1">
+            <img src="assets/images/procedures/paso2.jpg" alt="Paso 2">
+            <img src="assets/images/procedures/paso3.jpg" alt="Paso 3">
+            <img src="assets/images/procedures/paso5.jpg" alt="Paso 5">
+            <img src="assets/images/procedures/paso6.jpg" alt="Paso 6">
           
         </div>
       </section>
@@ -146,7 +148,7 @@
 
 
                 <div class="advantages-image">
-                    <img src="assets/equipo.jpg" alt="Ventajas Mohs">
+                    <img src="assets/images/misc/equipo.jpg" alt="Ventajas Mohs">
                 </div>
                 <div class="benefits-grid" style="display: flex; flex-direction: column;">
                     <div class="benefit-item">
@@ -172,49 +174,49 @@
         <p class="team-intro"></p>
         <div class="team-grid">
             <div class="team-card" data-aos="fade-up">
-                <img src="assets/cvs/muñoz.jpg" alt="Dr. Alvaro Otero Muñoz">
+                <img src="assets/images/team/muñoz.jpg" alt="Dr. Alvaro Otero Muñoz">
                 <h3>Alvaro Otero Muñoz</h3>
-                <a href="alvaro-otero.html" class="cv-link">Ver CV</a>
+                <a href="pages/team/alvaro-otero.html" class="cv-link">Ver CV</a>
             </div>
             <div class="team-card" data-aos="fade-up" data-aos-delay="100">
-                <img src="assets/cvs/panelli.jpg" alt="Dra. Elisa Panelli">
+                <img src="assets/images/team/panelli.jpg" alt="Dra. Elisa Panelli">
                 <h3>Elisa Panelli</h3>
-                <a href="elisa-panelli.html" class="cv-link">Ver CV</a>
+                <a href="pages/team/elisa-panelli.html" class="cv-link">Ver CV</a>
             </div>
             <div class="team-card" data-aos="fade-up">
-                <img src="assets/cvs/serrano.jpg" alt="Dr. Jeronimo Serrano">
+                <img src="assets/images/team/serrano.jpg" alt="Dr. Jeronimo Serrano">
                 <h3>Jeronimo Serrano</h3>
-                <a href="jeronimo-serrano.html" class="cv-link">Ver CV</a>
+                <a href="pages/team/jeronimo-serrano.html" class="cv-link">Ver CV</a>
             </div>
             <div class="team-card" data-aos="fade-up" data-aos-delay="100">
-                <img src="assets/cvs/verna.png" alt="Dra. Silvina Verna">
+                <img src="assets/images/team/verna.png" alt="Dra. Silvina Verna">
                 <h3>Silvina Verna</h3>
-                <a href="silvina-verna.html" class="cv-link">Ver CV</a>
+                <a href="pages/team/silvina-verna.html" class="cv-link">Ver CV</a>
             </div>
             <div class="team-card" data-aos="fade-up">
-                <img src="assets/cvs/martin.jpg" alt="Sofia Martin">
+                <img src="assets/images/team/martin.jpg" alt="Sofia Martin">
                 <h3>Sofia Martin</h3>
-                <a href="sofia-martin.html" class="cv-link">Ver CV</a>
+                <a href="pages/team/sofia-martin.html" class="cv-link">Ver CV</a>
             </div>
             <div class="team-card" data-aos="fade-up" data-aos-delay="100">
-                <img src="assets/cvs/oliver.jpeg" alt="Maria Oliver">
+                <img src="assets/images/team/oliver.jpeg" alt="Maria Oliver">
                 <h3>Maria Oliver</h3>
-                <a href="maria-oliver.html" class="cv-link">Ver CV</a>
+                <a href="pages/team/maria-oliver.html" class="cv-link">Ver CV</a>
             </div>
             <div class="team-card" data-aos="fade-up">
-                <img src="assets/cvs/navarete.jpeg" alt="Fabiana Narvarte">
+                <img src="assets/images/team/navarete.jpeg" alt="Fabiana Narvarte">
                 <h3>Fabiana Narvarte</h3>
-                <a href="fabiana-narvarte.html" class="cv-link">Ver CV</a>
+                <a href="pages/team/fabiana-narvarte.html" class="cv-link">Ver CV</a>
             </div>
             <div class="team-card" data-aos="fade-up" data-aos-delay="100">
-                <img src="assets/cvs/busca.jpg" alt="Ignacio Busca">
+                <img src="assets/images/team/busca.jpg" alt="Ignacio Busca">
                 <h3>Ignacio Busca</h3>
-                <a href="ignacio-busca.html" class="cv-link">Ver CV</a>
+                <a href="pages/team/ignacio-busca.html" class="cv-link">Ver CV</a>
             </div>
             <div class="team-card" data-aos="fade-up">
-                <img src="assets/cvs/nutricionista.jpg" alt="jorgelina paramo">
+                <img src="assets/images/team/nutricionista.jpg" alt="jorgelina paramo">
                 <h3>Jorgelina Páramo</h3>
-                <a href="jorgelina-paramo.html" class="cv-link">Ver CV</a>
+                <a href="pages/team/jorgelina-paramo.html" class="cv-link">Ver CV</a>
             </div>
         </div>
     </section>
@@ -316,14 +318,14 @@
                 <div class="info-item">
                     <i class="fas fa-phone"></i>
                     <div class="qr-code">
-                        <img src="assets/qr-telefono.png" alt="QR Teléfono" style="width: 100px; height: 100px;">
+                        <img src="assets/icons/qr-telefono.png" alt="QR Teléfono" style="width: 100px; height: 100px;">
                         <p>teléfonos</p>
                     </div>
                 </div>
                 <div class="info-item">
                     <i class="fab fa-instagram"></i>
                     <div class="qr-code">
-                        <img src="assets/qr-instagram.png" alt="QR Instagram" style="width: 100px; height: 100px;">
+                        <img src="assets/icons/qr-instagram.png" alt="QR Instagram" style="width: 100px; height: 100px;">
                         <p>Redes (IG)</p>
                     </div>
                 </div>
@@ -419,6 +421,24 @@ setTimeout(() => {
     startCarousel();
 }, 1000);
 
+</script>
+
+<script>
+// Control del video del hero con pausa antes del loop
+document.addEventListener('DOMContentLoaded', function() {
+    const heroVideo = document.getElementById('hero-video');
+    if (heroVideo) {
+        heroVideo.playbackRate = 1;
+        
+        // Cuando el video termine, esperar 3 segundos antes de reiniciar
+        heroVideo.addEventListener('ended', function() {
+            setTimeout(function() {
+                heroVideo.currentTime = 0;
+                heroVideo.play();
+            }, 3000); // 3000 milisegundos = 3 segundos
+        });
+    }
+});
 </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>

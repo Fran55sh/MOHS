@@ -27,9 +27,11 @@ body {
 
 
 
-.about-image {width: 2500px;
+.about-image {
+    width: 2500px;
     height: 700px;
-    overflow: hidden;}
+    overflow: hidden;
+}
 
 
 .about-image img {
@@ -99,28 +101,25 @@ body {
 }
 
 @media (max-width: 1500px) {
-    
-.about-image {width: 100%;
-    height: 100%;}
+    .about-image {
+        width: 100%;
+        height: 100%;
+    }
 
-.about-content{
-    flex-direction: column;
-}
-.mohs-intro .container{
-    flex-direction: column-reverse;
-}
+    .about-content {
+        flex-direction: column;
+    }
 
-.step-item{
-    width: 70vw;
-}
+    .mohs-intro .container {
+        flex-direction: column-reverse;
+    }
 
-
-
+    .step-item {
+        width: 70vw;
+    }
 }
 
 @media (max-width: 768px) {
-
-    
     .nav-links {
         display: none;
     }
@@ -131,9 +130,6 @@ body {
 }
 
 @media (min-width: 769px) {
-
-   
-
     .nav-links {
         display: flex;
     }
@@ -158,15 +154,35 @@ body {
     overflow: hidden;
 }
 
+/* Video Container - Full Viewport Background */
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
 /* Fixed height for mobile devices */
 @media (max-width: 800px) {
     .hero {
         height: 500px;
         min-height: 500px;
     }
+    
+    .video-container {
+        height: 100%;
+    }
 }
-
-
 
 .hero-content {
     top: 120px;
@@ -237,7 +253,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('assets/fondo-repeat.png');
+    background-image: url('assets/images/backgrounds/fondo-repeat.png');
     background-repeat: repeat;
     opacity: 0.5;
     filter: blur(5px);
@@ -419,7 +435,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('assets/fondo-repeat.png');
+    background-image: url('assets/images/backgrounds/fondo-repeat.png');
     background-repeat: repeat;
     opacity: 0.5;
     filter: blur(5px);
@@ -582,7 +598,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('assets/fondo-repeat.png');
+    background-image: url('assets/images/backgrounds/fondo-repeat.png');
     background-repeat: repeat;
     opacity: 0.5;
     filter: blur(5px);
@@ -609,35 +625,6 @@ body {
     border: 1px solid var(--secondary-color);
     border-radius: 5px;
     background: var(--white);
-}
-
-.faq-question {
-    padding: 1.5rem;
-    background: var(--light-bg);
-    cursor: pointer;
-    font-weight: 500;
-    position: relative;
-    transition: background 0.3s ease;
-    border-radius: 5px 5px 0 0;
-}
-
-.faq-question:hover {
-    background: var(--secondary-color);
-}
-
-.faq-question::after {
-    content: '+';
-    position: absolute;
-    right: 1.5rem;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.5rem;
-    color: var(--primary-color);
-    transition: transform 0.3s ease;
-}
-
-.faq-item.active .faq-question::after {
-    transform: translateY(-50%) rotate(45deg);
 }
 
 /* FAQ Accordion - Pure CSS Solution */
@@ -670,28 +657,31 @@ body {
     color: var(--primary-color);
     transition: transform 0.3s ease;
 }
+
 .faq-answer {
     max-height: 0;
     overflow: hidden;
     padding: 0 1.5rem;
     background: var(--white);
     border-radius: 0 0 5px 5px;
-  }
-  
-  .faq-toggle:checked + .faq-question + .faq-answer {
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-toggle:checked + .faq-question + .faq-answer {
     max-height: 1000px;
     padding: 1.5rem;
-  }
+}
 
-
-/* Rotate + to × when checked */
 .faq-toggle:checked + .faq-question::after {
     transform: translateY(-50%) rotate(45deg);
 }
 
-/* Close other FAQs when one is opened */
 .faq-toggle:checked + .faq-question {
     background: var(--secondary-color);
+}
+
+.faq-item.active .faq-question::after {
+    transform: translateY(-50%) rotate(45deg);
 }
 
 /* Patient Info Section */
@@ -737,7 +727,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('assets/fondo-repeat.png');
+    background-image: url('assets/images/backgrounds/fondo-repeat.png');
     background-repeat: repeat;
     opacity: 0.5;
     filter: blur(5px);
@@ -1034,20 +1024,6 @@ footer {
 }
 
 
-.faq-question::after {
-    content: '+';
-    position: absolute;
-    right: 1.5rem;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.5rem;
-    color: var(--primary-color);
-    transition: transform 0.3s ease;
-}
-
-.faq-item.active .faq-question::after {
-    transform: translateY(-50%) rotate(45deg);
-}
 
 
 /* Enhanced Timeline Styling */
@@ -2078,19 +2054,4 @@ p,
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-
-/* FAQ Answer Animation Fix */
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 1.5rem;
-    background: var(--white);
-    border-radius: 0 0 5px 5px;
-    transition: max-height 0.3s ease, padding 0.3s ease;
-}
-
-.faq-toggle:checked + .faq-question + .faq-answer {
-    max-height: 1000px;
-    padding: 1.5rem;
 }

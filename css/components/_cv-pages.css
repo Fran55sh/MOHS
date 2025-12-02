@@ -1,0 +1,97 @@
+/* CV Pages Styles */
+.cv-section {
+    padding: 120px 0 60px;
+    background: var(--light-bg);
+    min-height: 100vh;
+    margin-top: 50px;
+}
+
+.cv-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.cv-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.cv-header h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.cv-title {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.cv-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.cv-section-item {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.cv-section-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.cv-section-item h2 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.cv-section-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cv-section-item li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.cv-section-item li:before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.cv-section-item li:last-child {
+    border-bottom: none;
+}
+
+.cv-section-item p {
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.cv-section-item a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.cv-section-item a:hover {
+    text-decoration: underline;
+}
+

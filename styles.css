@@ -157,10 +157,10 @@ body {
 /* Video Container - Full Viewport Background */
 .video-container {
     position: absolute;
-    top: 0;
+    top: 0; /* Se ajustará dinámicamente con JavaScript */
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100vh; /* Se ajustará dinámicamente con JavaScript */
     z-index: 0;
     overflow: hidden;
 }
@@ -180,7 +180,8 @@ body {
     }
     
     .video-container {
-        height: 100%;
+        /* Se ajustará dinámicamente con JavaScript - no usar height: 100% */
+        position: absolute;
     }
 }
 
